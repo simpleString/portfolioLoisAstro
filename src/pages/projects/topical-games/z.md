@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
 title: Hello, World
-image: assets/Image.png
+image: /assets/Image.png
 description:
   Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi excepturi rem
   obcaecati id quasi totam, sit deleniti impedit aliquid! Labore error recusandae
@@ -14,7 +14,7 @@ This Markdown file creates a page at `your-domain.com/page-1/`
 
 It probably isn't styled much, but Markdown does support:
 
-![A starry night sky.](assets/Image.png)
+![A starry night sky.](/assets/Image.png)
 
 - **bold** and _italics._
 - lists

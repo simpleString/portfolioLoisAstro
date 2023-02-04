@@ -1,7 +1,7 @@
 ---
 layout: ../../../layouts/MarkdownLayout.astro
 title: Hello, Worldsdfsdfsdf
-image: assets/Image.png
+image: /assets/Image.png
 description: Lorem ipsum dolor sit amet
 ---
 
@@ -44,7 +44,7 @@ ssssssssssssssssssssssssssssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaa
 
 It probably isn't styled much, but Markdown does support:
 
-![A starry night sky.](../../../../public/assets/Image.png)
+![A starry night sky.](/assets/Image.png)
 
 - **bold** and _italics._
 - lists
