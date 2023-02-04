@@ -1,0 +1,48 @@
+---
+import Project from "../components/Project.astro";
+import Layout from "../layouts/Layout.astro";
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  image: string;
+}
+
+let topGames;
+let complitedGames;
+
+try {
+  topGames = await Astro.glob<Frontmatter>("./projects/topical-games/*.md");
+
+  complitedGames = await Astro.glob("./projects/completed-games/*.md");
+} catch (error) {}
+---
+
+<Layout title="Michail Lois">
+  <div>
+    <h1 class="font-bold text-3xl inline-block mb-4">Topical Games</h1>
+    {
+      topGames?.map((tGame) => (
+        <Project
+          description={tGame.frontmatter.description}
+          href={tGame.url || "/404"}
+          image={tGame.frontmatter.image}
+          title={tGame.frontmatter.title}
+        />
+      ))
+    }
+  </div>
+  <div>
+    <h1 class="font-bold text-3xl inline-block mb-4">Completed Games</h1>
+    {
+      topGames?.map((tGame) => (
+        <Project
+          description={tGame.frontmatter.description}
+          href={tGame.url || "/404"}
+          image={tGame.frontmatter.image}
+          title={tGame.frontmatter.title}
+        />
+      ))
+    }
+  </div>
+</Layout>
